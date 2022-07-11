@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/global.css' ) }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/index.css' ) }}">
+</head>
+<body>
+    <h1>My First Flask App</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Eric</td>
+                <td>Dang</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
