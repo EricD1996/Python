@@ -13,7 +13,7 @@ def play2(num):
     number = num % 4
     return render_template('play2.html',num = num, newnum = newnum, number = number)
 
-@app.route('/play/<int:num>/<color>')
+@app.route('/play/<int:num>/<string:color>')
 def play3(num, color):
     newnum = math.floor(num / 4)
     number = num % 4
