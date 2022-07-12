@@ -1,0 +1,26 @@
+.header{
+    background-color: rgb(58, 54, 54);
+    margin: 0 auto;
+    width: 700px;
+    padding: 7px 10px;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+}
+#liheader{
+    list-style: none;
+    font-size: 2rem;
+    margin: 0 30px;
+    color: gold;
+}
+.list{
+    /* background-color: rgb(58, 54, 54); */
+    margin: 0 auto;
+    width: 700px;
+    padding: 10px;
+}
+li{
+    list-style: none;
+    font-size: 1.8rem;
+}

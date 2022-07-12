@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/table.css' ) }}">
+</head>
+<body>
+    <div class="header">
+        <ul>
+            <li id="liheader" >First Name</li>
+            <li id="liheader">Last Name</li>
+            <li id="liheader">Full Name</li>
+        </ul>
+    </div>
+    {% for i in range(length) %}
+    <div class="list">
+        <ul>
+            <li>{{users[i]['first_name']}}</li>
+            <li>{{users[i]['last_name']}}</li>
+            <li>{{users[i]['full_name']}}</li>
+        </ul>
+    </div>
+    {% endfor %}
+</body>
+</html>
+ 
