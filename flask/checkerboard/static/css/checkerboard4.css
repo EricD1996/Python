@@ -1,0 +1,23 @@
+h1{
+    color: red;
+    font-size: 3rem;
+}
+.header{
+    text-align: center;    
+    background-color: black;
+}
+.checkerboard{
+    display: flex;
+    justify-content: center;
+}
+.square{
+    /* border: 3px solid blue; */
+    width: 100px;
+    height: 100px;
+}
+#red{
+    background-color: red;
+}
+#black{
+    background-color: black;
+}
