@@ -9,12 +9,15 @@
 </head>
 <body>
     <h1>Counter</h1>
-    <h3>1</h3>
-    <form action="/count" method="POST">
+    <h3>{{session['number']}}</h3>
         <div class="button">
-            <button style="background-color: blue;">Click</button>
-            <button style="background-color: red;">Reset</button>
+            <form action="/count" method="POST">
+                <button style="background-color: blue;">Click</button>
+            </form>
+            <form action="/">
+                <button style="background-color: red;">Reset</button>
+            </form>
         </div>
-    </form>
+
 </body>
 </html>

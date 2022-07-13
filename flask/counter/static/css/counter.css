@@ -1,0 +1,12 @@
+h1, h3{
+    text-align: center;
+}
+.button{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+button{
+    margin: 0 30px;
+    color: white;
+}

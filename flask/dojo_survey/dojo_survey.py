@@ -8,7 +8,6 @@ def survey():
 
 @app.route('/process', methods=['POST'])
 def process():
-    print(f"You have now purchased a new {request.form['name']}")
     session['name'] = request.form['name']
     session['location'] = request.form['location']
     session['language'] = request.form['language']
