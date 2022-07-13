@@ -1,0 +1,32 @@
+.survey{
+    margin: 100px auto;
+    width: 400px;
+    height: 300px;
+    border: 3px solid black;
+    padding: 30px 50px;
+}
+.namerow, .locationselector, .languageselector{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 20px; */
+    margin-bottom: 20px;
+}
+input{
+    width:200px;
+}
+/* .locationselector{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+} */
+select{
+    width: 210px;
+}
+button{
+    margin-top: 10px;
+    background-color: darkcyan;
+    color: white;
+    box-shadow: 3px 3px black;
+}

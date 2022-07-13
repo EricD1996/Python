@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey Index</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/result.css' ) }}">
+</head>
+<body>
+    <div class="survey">
+        <h3><u>Submitted Info</u></h3>
+        <div class="name">
+            <label for="name">Name:</label>
+            <span>{{session['name']}}</span>
+        </div>
+        <div class="location">
+            <label for="location">Dojo Location:</label>
+            <span>{{session['location']}}</span>
+        </div>
+        <div class="language">
+            <label for="language">Favorite Language:</label>
+            <span>{{session['language']}}</span>
+        </div>
+        <div class="comment">
+            <label for="comment">Comment:</label>
+            <span>{{session['comment']}}</span>
+        </div>
+        <button>Go Back</button>
+    </div>
+</body>
+</html>
