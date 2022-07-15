@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+}
+table{
+    text-align: center;
+    margin: 0 auto;
+}
+.button{
+    width: 150px;
+    height: 50px;
+    margin: 0 auto;
+}

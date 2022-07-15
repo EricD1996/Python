@@ -1,0 +1,45 @@
+10	dojo1	2022-07-14 13:37:06	2022-07-14 13:37:06
+11	dojo2	2022-07-14 13:37:06	2022-07-14 13:37:06
+12	dojo3	2022-07-14 13:37:06	2022-07-14 13:37:06
+3	20	13:37:06	INSERT INTO dojos (name) VALUES ( 'dojo1')	1 row(s) affected	0.016 sec
+3	21	13:37:06	INSERT INTO dojos (name) VALUES ( 'dojo2')	1 row(s) affected	0.000 sec
+3	22	13:37:06	INSERT INTO dojos (name) VALUES ( 'dojo3')	1 row(s) affected	0.000 sec
+3	29	13:40:24	DELETE FROM dojos WHERE id in (8,9,10,11,12)	5 row(s) affected	0.015 sec
+14	dojo1	2022-07-14 13:41:16	2022-07-14 13:41:16
+15	dojo2	2022-07-14 13:41:18	2022-07-14 13:41:18
+16	dojo3	2022-07-14 13:41:19	2022-07-14 13:41:19
+3	34	13:41:16	INSERT INTO dojos (name) VALUES ( 'dojo1')	1 row(s) affected	0.000 sec
+3	35	13:41:18	INSERT INTO dojos (name) VALUES ( 'dojo2')	1 row(s) affected	0.016 sec
+3	36	13:41:19	INSERT INTO dojos (name) VALUES ( 'dojo3')	1 row(s) affected	0.000 sec
+3	46	13:52:21	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninja', '1', 20, 14)	1 row(s) affected	0.000 sec
+3	48	13:52:43	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninjaa', '2', 20, 14)	1 row(s) affected	0.016 sec
+3	49	13:52:47	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninjaaa', '3', 20, 14)	1 row(s) affected	0.016 sec
+3	50	13:52:48	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninja', '4', 20, 15)	1 row(s) affected	0.000 sec
+3	51	13:52:49	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('nninja', '5', 20, 15)	1 row(s) affected	0.000 sec
+3	52	13:52:51	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('nnninja', '6', 20, 15)	1 row(s) affected	0.016 sec
+3	53	13:52:53	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninja', '7', 20, 16)	1 row(s) affected	0.015 sec
+3	54	13:52:55	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninnja', '8', 20, 16)	1 row(s) affected	0.000 sec
+3	55	13:52:56	INSERT INTO ninjas (first_name, last_name, age, dojo_id) VALUES ('ninnnja', '9', 20, 16)	1 row(s) affected	0.015 sec
+
+14	dojo1	2022-07-14 13:41:16	2022-07-14 13:41:16	6	ninja	1	20	2022-07-14 13:52:21	2022-07-14 13:52:21	14
+14	dojo1	2022-07-14 13:41:16	2022-07-14 13:41:16	7	ninjaa	2	20	2022-07-14 13:52:43	2022-07-14 13:52:43	14
+14	dojo1	2022-07-14 13:41:16	2022-07-14 13:41:16	8	ninjaaa	3	20	2022-07-14 13:52:47	2022-07-14 13:52:47	14
+3	60	14:02:50	SELECT * FROM dojos 
+ JOIN ninjas ON dojos.id = ninjas.dojo_id
+ WHERE ninjas.dojo_id = 14
+ LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+
+16	dojo3	2022-07-14 13:41:19	2022-07-14 13:41:19	12	ninja	7	20	2022-07-14 13:52:53	2022-07-14 13:52:53	16
+16	dojo3	2022-07-14 13:41:19	2022-07-14 13:41:19	13	ninnja	8	20	2022-07-14 13:52:55	2022-07-14 13:52:55	16
+16	dojo3	2022-07-14 13:41:19	2022-07-14 13:41:19	14	ninnnja	9	20	2022-07-14 13:52:56	2022-07-14 13:52:56	16
+3	61	14:03:12	SELECT * FROM dojos 
+ JOIN ninjas ON dojos.id = ninjas.dojo_id
+ WHERE ninjas.dojo_id = 16
+ LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+
+id	first_name	last_name	age	created_at	updated_at	dojo_id	id	name	created_at	updated_at
+8	ninjaaa	3	20	2022-07-14 13:52:47	2022-07-14 13:52:47	14	14	dojo1	2022-07-14 13:41:16	2022-07-14 13:41:16
+3	63	14:05:34	SELECT * FROM ninjas
+ JOIN dojos ON ninjas.dojo_id = dojos.id
+ WHERE ninjas.id = 8
+ LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec

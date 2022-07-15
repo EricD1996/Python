@@ -1,0 +1,17 @@
+	#	Time	Action	Message	Duration / Fetch
+3	1	11:30:30	SELECT * FROM users.users
+ LIMIT 0, 1000	0 row(s) returned	0.016 sec / 0.000 sec
+3	2	11:36:46	INSERT INTO users (first_name, last_name, email) VALUES ('Eric', 'Dang', 'ed@gmail.com')	1 row(s) affected	0.000 sec
+3	3	11:36:46	INSERT INTO users (first_name, last_name, email) VALUES ('Spongebob', 'Squarepants', 'ss@gmail.com')	1 row(s) affected	0.016 sec
+3	4	11:36:46	INSERT INTO users (first_name, last_name, email) VALUES ('Patrick', 'Star', 'ps@gmail.com')	1 row(s) affected	0.000 sec
+3	5	11:36:59	SELECT * FROM users
+ LIMIT 0, 1000	3 row(s) returned	0.000 sec / 0.000 sec
+3	6	11:38:23	SELECT * FROM users WHERE email = 'ed@gmail.com'
+ LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+3	7	11:38:51	SELECT * FROM users WHERE id = 3
+ LIMIT 0, 1000	1 row(s) returned	0.000 sec / 0.000 sec
+3	8	11:39:33	UPDATE users SET last_name = 'Pancakes' WHERE id = 3	1 row(s) affected
+ Rows matched: 1  Changed: 1  Warnings: 0	0.281 sec
+3	9	11:40:00	DELETE FROM users WHERE id = 2	1 row(s) affected	0.016 sec
+3	10	11:42:10	SELECT first_name FROM users
+ LIMIT 0, 1000	2 row(s) returned	0.000 sec / 0.000 sec
