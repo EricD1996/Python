@@ -25,6 +25,26 @@ def create():
     User.create(request.form)
     return redirect('/')
 
+@app.route('/show/<int:show_id>')
+def show(show_id):
+    user = User.get_user({"id":show_id})
+    return render_template("show.html", user=user)
+
+@app.route('/edit/<int:edit_id>')
+def edit(edit_id):
+    user = User.get_user({"id":edit_id})
+    return render_template("edit.html", user=user)
+
+@app.route('/edit', methods = ['POST'])
+def pedit():
+    user = User.edit(request.form)
+    return redirect('/')
+
+@app.route('/delete/<int:delete_id>')
+def delete(delete_id):
+    deleted = User.delete({"id":delete_id})
+    return redirect('/',)
+
 if __name__=="__main__":
     app.run(debug=True)
 

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+</head>
+<body>
+    <h1>User {{user.id}}</h1>
+    <div class="info">
+        <div class="full_name">
+            <label for="full_name">Full Name: </label>
+            <h2>{{user.fullname}}</h2>
+        </div>
+        <div class="email">
+            <label for="email">Email:</label>
+            <h2>{{user.email}}</h2>
+        </div>
+        <div class="created">
+            <label for="created">Created On:</label>
+            <h2>{{user.created_at}}</h2>
+        </div>
+        <div class="updated">
+            <label for="updated">Last Updated On:</label>
+            <h2>{{user.updated_at}}</h2>
+        </div>
+    </div>
+    <a href="">Edit</a> | 
+    <a href="">Delete</a>
+</body>
+</html>
