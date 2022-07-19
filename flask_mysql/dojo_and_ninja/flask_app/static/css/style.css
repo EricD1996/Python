@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    margin: 0 auto;
+    width: 700px;
+    height: 900px;
+    justify-content: space-between;
+}
+.name{
+    margin-bottom: 20px;
+}
+input{
+    width:200px;
+}
+.col-right{
+    border: 3px solid black;
+    height: 500px;
+    width: 300px;
+}
