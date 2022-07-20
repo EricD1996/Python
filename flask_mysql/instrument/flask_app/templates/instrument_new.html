@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Instrument</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="d-flex align-items-center justify-content-between mx-5">
+                <h1>Add New Instrument</h1>
+                <div>
+                    <a href="/">dashboard</a>
+                    <a class="text-danger"href="/user/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <form action="/instrument/create" method="post">
+                <div class="mb-3">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" name="name" id="name">
+                    {% for message in get_flashed_messages(category_filter=["err_instruments_name"]) %}
+                    <p class="alert alert-danger">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    <label for="time_played">Time Played</label>
+                    <input class="form-control"type="number" name="time_played" id="time_played">
+                    {% for message in get_flashed_messages(category_filter=["err_instruments_time_played"]) %}
+                    <p class="alert alert-danger">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    <label for="type">Type</label>
+                    <input class="form-control"type="text" name="type" id="type">
+                    {% for message in get_flashed_messages(category_filter=["err_instruments_type"]) %}
+                    <p class="alert alert-danger">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    <label for="avg_price">Average Price</label>
+                    <input class="form-control"type="number" name="avg_price" id="avg_price">
+                    {% for message in get_flashed_messages(category_filter=["err_instruments_avg_price"]) %}
+                    <p class="alert alert-danger">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <div class="mb-3">
+                    <label for="review">Review</label>
+                    <textarea class="form-control" name="review" id="" cols="30" rows="10"></textarea>
+                    {% for message in get_flashed_messages(category_filter=["err_instruments_review"]) %}
+                    <p class="alert alert-danger">{{message}}</p>
+                    {% endfor %}
+                </div>
+                <button class="btn btn-success">Add Instrument</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- my js -->
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
+
