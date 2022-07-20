@@ -10,12 +10,13 @@
 
     <!-- my css -->
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-    <title>Template</title>
+    <title>Dashboard</title>
 </head>
 <body>
     <div class="container">
         <div class="row">
-
+            <h1>Welcome {{user.email}}</h1>
+            <a href="/user/logout">Logout</a>
         </div>
     </div>
 
@@ -26,7 +27,3 @@
     <script src="{{url_for('static', filename='js/script.js')}}"></script>
 </body>
 </html>
-
-{% for message in get_flashed_messages(category_filter=["err_users_first_name"])%}
-<p class="alert alert-danger">{{message}}</p>
-{% endfor %}
