@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <title>Movie</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="d-flex align-items-center justify-content-between mx-5">
+                <h1>Check out this movie!</h1>
+                <div>
+                    <a href="/">Home</a>
+                    <a class="text-danger"href="/user/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <form action="/movie/{{movie.id}}">
+                <div class="mb-3">
+                    <h2>{{movie.title}}</h2>
+                </div>
+                <div class="mb-3">
+                    <label for="date">Release Date:</label>
+                    <h3>{{movie.date}}</h3>
+                </div>
+                <div class="mb-3">
+                    <label for="description">Description:</label>
+                    <h3>{{movie.description}}</h3>
+                </div>
+                <div class="mb-3">
+                    <label for="name">Posted By:</label>
+                    <h2>{{movie.poster.first_name}} {{movie.poster.last_name}}</h2>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- my js -->
+    <script src="{{url_for('static', filename='js/script.js')}}"></script>
+</body>
+</html>
+

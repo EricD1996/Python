@@ -24,6 +24,31 @@
             </div>
         </div>
         <div class="row">
+            <form id="instrument-form">
+                <div class="mb-3">
+                    <label for="name">Name</label>
+                    <input class="form-control" type="text" name="name" id="name">
+                </div>
+                <div class="mb-3">
+                    <label for="time_played">Time Played</label>
+                    <input class="form-control"type="number" name="time_played" id="time_played">
+                </div>
+                <div class="mb-3">
+                    <label for="type">Type</label>
+                    <input class="form-control"type="text" name="type" id="type">
+                </div>
+                <div class="mb-3">
+                    <label for="avg_price">Average Price</label>
+                    <input class="form-control"type="number" name="avg_price" id="avg_price">
+                </div>
+                <div class="mb-3">
+                    <label for="review">Review</label>
+                    <textarea class="form-control" name="review" id="" cols="30" rows="10"></textarea>
+                </div>
+                <button class="btn btn-success">Add Instrument</button>
+            </form>
+        </div>
+        <div class="row">
             <table class="table">
                 <thead>
                     <tr>
@@ -32,7 +57,7 @@
                         <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="instrument-table-body">
                     {% for instrument in all_instruments %}
 
                         <tr>
